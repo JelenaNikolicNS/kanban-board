@@ -1,0 +1,58 @@
+body {font-family:Arial; color: #505050;}
+h2 {margin:5px; color: #505050;}
+h2:hover {}
+input[type=text], input[type=number] {margin:10px;}
+input[type=button] {margin:10px}
+.container {width: 10%; float:left;clear: right;}
+.sortable { list-style-type: none; margin:0; padding:2px; min-height:30px; border-radius: 5px;}
+.sortable li { margin: 3px 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px;}
+.sortable li span { position: absolute; margin-left: -1.3em; }
+
+.card{ background-color: lightgray; border: 1px solid gray;}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 0.7em;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip a {
+    text-decoration: none;
+    color: #505050;
+}
+
+#add_column {
+    margin: 10px 0;
+    padding: 5px 10px;
+}
+
+#add_column a {
+    color: #0d6aad;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.delete {
+    font-weight: normal;
+    color: red;
+    margin-left: 10px;
+}
