@@ -22,19 +22,5 @@ class StatesTest extends TestCase
         $this->assertTrue(true);
     }
 
-    public function test_state_is_inserted()
-    {
-        $state = new State;
-        $state->setName('Test');
-        $state->setLimit('1');
 
-        $this->assertEquals('Test', $state->name);
-        $this->assertEquals('1', $state->limit);
-    }
-
-//    public function test_state_is_edited()
-//    {
-//       $state = State
-//
-//    }
 }

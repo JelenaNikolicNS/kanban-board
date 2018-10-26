@@ -13,6 +13,9 @@ class StateController extends Controller
      */
     public function index() {
         $states = \App\State::all();
+        if(!$states) {
+            $states = '';
+        }
         return view('welcome',compact('states'));
     }
 
@@ -69,7 +72,11 @@ class StateController extends Controller
     {
         $state = \App\State::find($id);
         $state->name = $request->get('name');
-        $state->limit = $request->get('limit');
+        if($request->get('limit')){
+            $state->limit = $request->get('limit');
+        } else {
+            $state->limit = '00';
+        }
         $state->save();
         return redirect('/');
     }

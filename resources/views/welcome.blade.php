@@ -5,6 +5,10 @@
         <div>
             <button id="add_column"><a href="add_state">Add Column (Card State)</a></button>
         </div>
+        @php
+
+            phpinfo()
+        @endphp
         @foreach($states as $state )
             @php
                 $idAttr = strtolower($state['name']);
