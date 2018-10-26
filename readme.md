@@ -63,3 +63,21 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Setting up the project
+
+1. Go to the folder application (kanban-board) using cd command on your cmd or terminal
+
+2. Run composer install on your cmd or terminal
+
+3. Copy .env.example file to .env on the root folder. 
+
+4. Open your .env file and change the database name (DB_DATABASE) to whatever you have, username (DB_USERNAME) and password (DB_PASSWORD) field correspond to your configuration. 
+
+5. Run php artisan key:generate
+
+6. Run php artisan migrate
+
+7. Run php artisan serve
+
+8. Go to localhost:8000
