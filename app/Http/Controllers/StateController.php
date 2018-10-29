@@ -12,7 +12,8 @@ class StateController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index() {
-        $states = \App\State::all();
+        //$states = \App\State::all();
+        $states = \App\State::orderBy('id','ASC')->get();;
         if(!$states) {
             $states = '';
         }
@@ -36,17 +37,21 @@ class StateController extends Controller
      */
     public function insert(Request $request)
     {
+        $request->validate([
+            'name' => 'required||max:50',
+            ]);
+
         $state = new \App\State;
         $state->name = $request->get('name');
 
         if($request->get('limit')){
             $state->limit = $request->get('limit');
         } else {
-            $state->limit = '00';
+            $state->limit = '0';
         }
         $state->save();
 
-        return redirect('/')->with('success', 'State has been added');
+        return redirect('/')->with('success', 'State ' . $state->name . ' has been added.');
     }
 
     /**
@@ -70,15 +75,19 @@ class StateController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'name' => 'required||max:50',
+        ]);
+
         $state = \App\State::find($id);
         $state->name = $request->get('name');
         if($request->get('limit')){
             $state->limit = $request->get('limit');
         } else {
-            $state->limit = '00';
+            $state->limit = '0';
         }
         $state->save();
-        return redirect('/');
+        return redirect('/')->with('success', 'State ' . $state->name . ' has been updated.');
     }
 
     /**
@@ -91,7 +100,7 @@ class StateController extends Controller
     {
         $state = \App\State::find($id);
         $state->delete();
-        return redirect('/');
+        return redirect('/')->with('success', 'State ' . $state->name . ' has been deleted.');;
     }
 
 }

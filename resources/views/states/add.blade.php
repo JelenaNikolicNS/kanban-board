@@ -2,6 +2,15 @@
 
 @section('content')
     <h2>Adding State</h2>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li class="error">{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <form method="post" action="{{url('state')}}" enctype="multipart/form-data">
         @csrf

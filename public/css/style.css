@@ -56,3 +56,15 @@ a:link {
     color: red;
     margin-left: 10px;
 }
+
+.alert-success {
+    color: mediumseagreen;
+}
+
+.error {
+    color: red;
+}
+
+li.error {
+   list-style-type: none;
+}

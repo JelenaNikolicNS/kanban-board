@@ -16,7 +16,9 @@ Route::get('/', 'StateController@index');
 // Inserting and updating states(columns)
 Route::get('/add_state', 'StateController@add');
 Route::post('/state', 'StateController@insert');
+
 Route::get('/edit_state/{id}', 'StateController@edit');
 Route::post('/update_state/{id}', 'StateController@update');
+
 Route::get('/delete/{id}', 'StateController@delete');
 
