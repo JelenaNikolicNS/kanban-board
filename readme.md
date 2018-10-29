@@ -81,3 +81,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 7. Run php artisan serve
 
 8. Go to localhost:8000
+
+## Running PHPUnit tests
+
+1. Create database for testing
+
+2. Open config/database and change database name, username and password that are alerady set under "testing"
+
+3. Run tests using commad: php vendor/phpunit/phpunit/phpunit
