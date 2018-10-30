@@ -88,4 +88,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 2. Open config/database and change database name, username and password that are alerady set under "testing"
 
-3. Run tests using commad: php vendor/phpunit/phpunit/phpunit
+3. Run php artisan migrate --database=testing
+
+4. Run tests using commad: php vendor/phpunit/phpunit/phpunit
